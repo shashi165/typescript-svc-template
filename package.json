@@ -1,0 +1,22 @@
+{
+  "name": "typescript-svc-template",
+  "version": "0.0.1",
+  "description": "Template for typescript nodejs projects",
+  "main": "src/index.js",
+  "scripts": {
+    "pretest": "npm run build",
+    "test:unit": "npm run test",
+    "test": "jest",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "author": "Shashikant Hirugade",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4"
+  }
+}
