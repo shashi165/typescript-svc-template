@@ -6,6 +6,4 @@ on:
 
 jobs:
   test_pull_request:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ./.github/workflows/unitTestWorkflow.yml
+    uses: ./.github/workflows/unitTestWorkflow.yml
