@@ -8,15 +8,23 @@
     "test:unit": "npm run test",
     "test": "jest",
     "build": "tsc",
-    "watch": "tsc -w"
+    "watch": "tsc -w",
+    "start": "npm run build && node build/index.js",
+    "audit:resolve": "SHELL=sh resolve-audit --production",
+    "audit:check": "SHELL=sh check-audit --production",
+    "clean": "rm -rf ./dist",
+    "lint": "eslint --ext .js,.ts src --color",
+    "lint:fix": "eslint --ext .js,.ts src --color --fix"
   },
   "author": "Shashikant Hirugade",
   "license": "ISC",
-  "dependencies": {
-  },
   "devDependencies": {
     "@types/jest": "^27.4.1",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-react": "^7.29.4",
     "jest": "^27.5.1",
+    "standard-version": "^9.3.2",
     "ts-jest": "^27.1.4"
   }
 }
