@@ -9,12 +9,7 @@ jobs:
   pr_title_check:
     runs-on: ubuntu-latest
     steps:
-      - uses: aslafy-z/conventional-pr-title-action@v2.2.5
-        with:
-          success-state: Title follows the specification.
-          failure-state: Title does not follow the specification.
-          context-name: conventional-pr-title
-          preset: conventional-changelog-angular@latest
+      - uses: mojaloop/pr-tools@0.1.8
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   test_pull_request:
