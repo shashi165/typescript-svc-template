@@ -18,3 +18,5 @@ jobs:
         with:
           node-version: 16
       - run: npm run release
+      - name: Push the release
+        run: git push --follow-tags
