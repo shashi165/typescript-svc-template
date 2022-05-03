@@ -1,4 +1,4 @@
-import { add, mul } from "../src/index";
+import { add, mul } from "../../src/index";
 
 describe("test add function", () => {
   it("should return 15 for add(10,5)", () => {
@@ -12,7 +12,7 @@ describe("test add function", () => {
 
 describe("test mul function", () => {
   it("should return 15 for mul(3,5)", () => {
-    expect(mul(3, 5)).toBe(15);
+    expect(mul(3, 5)).toBe(150);
   });
 });
 
