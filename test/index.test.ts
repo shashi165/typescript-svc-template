@@ -1,6 +1,4 @@
 import { add, mul } from "../src/index";
-'use strict';
-
 
 describe("test add function", () => {
   it("should return 15 for add(10,5)", () => {
