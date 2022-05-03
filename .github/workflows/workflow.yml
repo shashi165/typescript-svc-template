@@ -15,7 +15,8 @@ jobs:
           failure-state: Title does not follow the specification.
           context-name: conventional-pr-title
           preset: conventional-changelog-angular@latest
-
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   test_pull_request:
     needs: pr_title_check
     runs-on: ubuntu-latest
