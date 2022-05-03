@@ -1,4 +1,4 @@
-import { add, mul } from "../src/index";
+import { add, mul } from "../../src/index";
 
 describe("test add function", () => {
   it("should return 15 for add(10,5)", () => {
