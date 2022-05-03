@@ -1,6 +1,6 @@
 {
   "name": "typescript-svc-template",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Template for typescript nodejs projects",
   "main": "src/index.js",
   "scripts": {

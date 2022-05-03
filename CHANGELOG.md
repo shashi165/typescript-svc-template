@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 0.0.6 (2022-05-03)
+
+
+### Features
+
+* test12 ([#22](https://github.com/shashi165/typescript-svc-template/issues/22)) ([e90653c](https://github.com/shashi165/typescript-svc-template/commit/e90653c738aff9c7c1744d4982a30a5696964f2e))
+
 ### 0.0.5 (2022-05-03)
 
 
