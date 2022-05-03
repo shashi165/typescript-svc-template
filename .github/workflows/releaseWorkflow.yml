@@ -13,13 +13,17 @@ jobs:
     needs: test_unit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - uses: actions/setup-node@v1
         with:
           node-version: 16
-      # - name: Configure git
-      #     run: git config user.email ${GIT_CI_EMAIL}      
-      #     run: git config user.name ${GIT_CI_USER}      
+      - name: Configure git
+        # run: | 
+        #   git config user.name "$(git log -n 1 --pretty=format:%an)"
+        #   git config user.email "$(git log -n 1 --pretty=format:%ae)"   
+        run: | 
+          git config user.name "${{ github.event.pusher.name }}"
+          git config user.email "${{ github.event.pusher.email }}"     
       - name: Create the release      
         run: |
           npm ci
