@@ -1,23 +1,23 @@
-name: Create the release
+# name: Create the release
 
-on:
-  push:
-    branches: 
-      - main
+# on:
+#   push:
+#     branches: 
+#       - main
 
-jobs:
-  test_unit:
-    uses: ./.github/workflows/unitTestJob.yml
+# jobs:
+#   test_unit:
+#     uses: ./.github/workflows/unitTestJob.yml
 
-  release_tag:
-    needs: test_unit
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: npm run release
-      - name: Push the release
-        run: git push --follow-tags
+#   release_tag:
+#     needs: test_unit
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - uses: actions/setup-node@v1
+#         with:
+#           node-version: 16
+#       - run: npm ci
+#       - run: npm run release
+#       - name: Push the release
+#         run: git push --follow-tags
