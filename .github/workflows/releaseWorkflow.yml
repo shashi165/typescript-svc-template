@@ -18,9 +18,6 @@ jobs:
         with:
           node-version: 16
       - name: Configure git
-        # run: | 
-        #   git config user.name "$(git log -n 1 --pretty=format:%an)"
-        #   git config user.email "$(git log -n 1 --pretty=format:%ae)"   
         run: | 
           git config user.name "${{ github.event.pusher.name }}"
           git config user.email "${{ github.event.pusher.email }}"     
